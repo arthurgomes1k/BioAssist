@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/styles/triagem.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+
+        <section class="container">
+            
+            <div class="header">
+                <h1>Informe seus sintomas:</h1>
+            </div>
+
+            <form action="{% url 'triagem' %}" method="post">
+                {% csrf_token %}
+                <div class="sintomas">
+
+                    <label for="">Sintoma 1:</label>
+                    <input type="text" name="sintoma_1" id="sintoma_1">
+
+                    <label for="">Sintoma 2:</label>
+                    <input type="text" name="sintoma_2" id="sintoma_2">
+
+                    <label for="">Sintoma 3:</label>
+                    <input type="text" name="sintoma_3" id="sintoma_3">
+
+                    <button class="botao_adicionar" id="botao_add" type="button">
+                        <div>+</div><p>Adicionar novo sintoma</p>
+                    </button>
+
+                    <button type="submit">Enviar</button>
+
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <script src="{% static 'js/triagem.js' %}"></script>
+
+</body>
+</html>

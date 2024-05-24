@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/styles/index.css' %}">
+    <title>Bem vindo!</title>
+</head>
+<body>
+    <main>
+
+        <section class="container">
+            <h1>Bio<strong>Assist</strong></h1>
+        </section>
+
+        <section class="container_dados">
+            <h1>Identificar Enfermidade</h1>
+            <div class="line"></div>
+            <div class="descricao">
+                <p>Para proporcionar um diagnóstico preciso e identificar a sua doença, vamos coletar algumas informações pessoais e de saúde. Esses dados são essenciais para a realização de uma triagem completa, permitindo que nossa equipe médica avalie sua condição de maneira eficaz e ofereça o tratamento mais adequado para o seu caso.</p>
+                <p>A confidencialidade e a segurança dos seus dados são nossas principais prioridades.</p>
+            </div>
+            <div class="proximo">
+                <a href="{% url 'triagem' %}">Vamos lá</a>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
